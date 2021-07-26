@@ -1,0 +1,26 @@
+export const slides = [
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/11/b7aeafc6-b927-4eaa-8e5e-89ac052b14121626008551824-Desktop.jpg",
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/11/ab71ff9f-527d-43a7-bdec-9f4693323d3c1626008551784-HRX_Desk.jpg",
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/11/82f4fd60-ab84-42de-8609-689bc5f66a211626008551748-Desktop-2.jpg",
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/11/12ada375-6b2b-449c-a316-2c99ebfc8d091626009266074-DK_Kurtas.jpg",
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/5/25/0eee9542-8eb8-4470-b09c-7a313962afb71621944592448-Nautica.jpg",
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/5/25/971e9cfd-7eea-4a4a-8204-fef5cb45cc3c1621944517212-H-M_Desk_Banner.jpg",
+  },
+];

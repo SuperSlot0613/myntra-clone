@@ -1,0 +1,105 @@
+.productright{
+    display:flex;
+    /* align-items: center; */
+    justify-content:space-between;
+    margin-top:20px;
+    padding:20px;
+}
+
+.product_containers{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    flex-wrap: wrap;
+}
+
+.product_containers > .product_cards{
+    width:225px;
+    height:400px;
+    box-shadow: 2px 2px 2px 2px rgba(153, 110, 110, 0.53);
+    border-radius: 15px;
+    background:rgba(255,255,255,0.1);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_containers > .product_cards > .product_contents{
+    padding:5px;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    transition:0.8s;
+    object-fit: contain;
+}
+
+.product_containers > .product_cards > .product_contents > img{
+    width:100%;
+    height:250px;
+    z-index: 4;
+    /* border-radius: 12px; */
+    object-fit: contain;
+    position:sticky;
+}
+
+.wishlist_button{
+    z-index: 10 !important;
+    top:225px !important;
+    position:absolute !important;
+    width: 83% !important;
+    text-align: center !important;
+    background-color: whitesmoke !important;
+    color: black !important;
+    border: 1px solid gray !important;
+    font-weight: 700 !important;
+}
+
+.wishlist_button:hover{
+    border:1px solid black !important;
+    background: white !important;
+}
+
+.product_display{
+    display:none;
+}
+
+.product_text{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.product_text > h4{
+    color:black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product_text > p{
+    color:gray;
+}
+
+.product_text > span{
+    color:black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product_button > .button{
+    color:white !important;
+    background: crimson !important;
+    width:200px;
+    border:1px solid gray;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.button_hide{
+    display:none;
+}
+
+
