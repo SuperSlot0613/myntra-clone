@@ -10,6 +10,9 @@
 
 This Myntra Clone pack is made using React. The data on the website is directly linked to a code. Any changes to the website can be made in the code. The changes will then be reflected on to the website page. This allows you to customize your own personal web page that can be used for applying to jobs or other personal uses.
 
+## To run the backend server
+To run the backend server go to the backend folder and run "nodemon app.js" command 
+
 ## 1. Make sure you have NODE installed!
 
 Firstly, you will need to download the latest version of Node by <a href="https://nodejs.org/en/download/">CLICKING HERE</a>
