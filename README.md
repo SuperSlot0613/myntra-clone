@@ -1,7 +1,7 @@
 # restaurant-menu
 # SuperSlot React JS Myntra Clone and Online cloths shopping website
 
-![SuperSlot React JS  Myntra Clone](myntra-clone.png?raw=true "SuperSlot React JS  Myntra Clone")</br>
+![SuperSlot React JS  Myntra Clone](myntra-home.png?raw=true "SuperSlot React JS  Myntra Clone")</br>
 ![](myntra-product.png?raw=true "SuperSlot React JS  Myntra Clone")
 
 ### <a href="https://myntra-clone-2d5af.web.app/">LIVE DEMO</a>
