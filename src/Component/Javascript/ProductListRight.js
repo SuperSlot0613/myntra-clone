@@ -13,14 +13,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 toast.configure();
 
-function ProductListRight({ id, image, title, description, rate }) {
+function ProductListRight({ id, image,image1,image2,image3, title, description, rate }) {
   const [wish, setWish] = useState(false);
 
   const dispatch = useDispatch();
   const history = useHistory();
 
   const Imagedispatcher = () => {
-    dispatch(productLoader({ id, image, title, description, rate }));
+    dispatch(productLoader({ id, image,image1,image2,image3, title, description, rate }));
     history.push("/productdetail");
   };
 

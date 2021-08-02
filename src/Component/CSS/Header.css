@@ -134,6 +134,8 @@
   font-weight: 750;
   padding-left: 10px;
   justify-content: space-around;
+  text-decoration: none;
+  text-underline-offset: none;
 }
 
 .header__optionLineTwo:hover{

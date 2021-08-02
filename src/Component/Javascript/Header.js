@@ -10,6 +10,7 @@ import { EMPTY_BASKET, selectBasket } from "../../features/basketSlice";
 import { selectUser } from "../../features/detailSlice";
 import { EMPTY_WISHLIST, selectWishlist } from "../../features/wishlistSlice";
 import { auth } from "../../firebase";
+import EventIcon from "@material-ui/icons/Event";
 
 function Header() {
   const dispatch = useDispatch();
@@ -17,14 +18,19 @@ function Header() {
   const basket = useSelector(selectBasket);
 
   const user = useSelector(selectUser);
+  console.log(user);
 
   const wishlist = useSelector(selectWishlist);
 
   const handleLogin = () => {
-    auth.signOut();
-    dispatch(EMPTY_BASKET());
-    dispatch(EMPTY_WISHLIST());
-    history.push("/");
+    if (user) {
+      auth.signOut();
+      dispatch(EMPTY_BASKET());
+      dispatch(EMPTY_WISHLIST());
+      history.push("/");
+    }else{
+      history.push("/login")
+    }
   };
 
   return (
@@ -76,6 +82,12 @@ function Header() {
             <span className="header__optionLineTwo">
               Cart <span> {user ? basket?.length : 0}</span>
             </span>
+          </div>
+        </Link>
+        <Link to="/order">
+          <div className="cart">
+            <EventIcon className="basket_icon" />
+            <span className="header__optionLineTwo">Order Items</span>
           </div>
         </Link>
       </div>

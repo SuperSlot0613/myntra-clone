@@ -19,6 +19,7 @@ function WishList() {
             key={item.id}
             id={item.id}
             image={item.image}
+            title={item.title}
             description={item.description}
             rate={item.rate}
           />

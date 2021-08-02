@@ -48,7 +48,7 @@ function ProductDetail() {
     dispatch(ADD_TO_BASKET({id,image,title,description,rate}))
   }
 
-  window.addEventListener("resize", slideImage);
+  // window.addEventListener("resize", slideImage);
   return (
     <div className="productdetail">
       <div className="card-wrapper">
@@ -61,15 +61,15 @@ function ProductDetail() {
                   alt="shoe image"
                 />
                 <img
-                  src={detail.image}
+                  src={detail.image1}
                   alt="shoe image"
                 />
                 <img
-                  src={detail.image}
+                  src={detail.image2}
                   alt="shoe image"
                 />
                 <img
-                  src={detail.image}
+                  src={detail.image3}
                   alt="shoe image"
                 />
               </div>
@@ -86,7 +86,7 @@ function ProductDetail() {
               <div className="img-item">
                 <a href="#" data-id="2">
                   <img
-                    src={detail.image}
+                    src={detail.image1}
                     alt="shoe image"
                   />
                 </a>
@@ -94,7 +94,7 @@ function ProductDetail() {
               <div className="img-item">
                 <a href="#" data-id="3">
                   <img
-                    src={detail.image}
+                    src={detail.image2}
                     alt="shoe image"
                   />
                 </a>
@@ -102,7 +102,7 @@ function ProductDetail() {
               <div className="img-item">
                 <a href="#" data-id="4">
                   <img
-                    src={detail.image}
+                    src={detail.image3}
                     alt="shoe image"
                   />
                 </a>

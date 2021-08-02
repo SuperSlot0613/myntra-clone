@@ -36,6 +36,7 @@ function WishListProduct({id, image, title, description, rate }) {
           draggable: true,
           progress: undefined,
         });
+        dispatch(REMOVE_FROM_WISHLIST(id))
       };
 
   return (

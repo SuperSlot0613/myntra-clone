@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Component/Javascript/Header";
@@ -10,20 +10,22 @@ import ProductList from "./Component/Javascript/ProductList";
 import LoginForm from "./Component/Javascript/LoginForm";
 import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
-import { SET_USER } from "./features/detailSlice";
+import { SET_USER, SET_USERUID } from "./features/detailSlice";
 import WishList from "./Component/Javascript/WishList";
 import Basket from "./Component/Javascript/Basket";
+import Payment from "./Component/Javascript/Payment";
+import Orders from "./Component/Javascript/Orders";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log("The use is", authUser);
+      // console.log("The use is", authUser);
 
       if (authUser) {
         dispatch(SET_USER(authUser?.email));
-        console.log(authUser?.email)
+        dispatch(SET_USERUID(authUser?.uid))
       } else {
         dispatch(SET_USER(null));
       }
@@ -54,6 +56,13 @@ function App() {
           <Route exact path="/basket">
             <Basket/>
             {/* <Footer /> */}
+          </Route>
+          <Route exact path="/payment">
+            <Payment/>
+            {/* <Footer /> */}
+          </Route>
+          <Route exact path="/order">
+            <Orders />
           </Route>
           <Route exact path="/">
             <Home />

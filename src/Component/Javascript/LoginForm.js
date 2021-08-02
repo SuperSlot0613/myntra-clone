@@ -7,10 +7,13 @@ import firebase from "firebase";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
+import { SET_USER_MOBILE } from "../../features/detailSlice";
+import { useDispatch } from "react-redux";
 toast.configure();
 
 function LoginForm() {
   const history = useHistory();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
@@ -95,6 +98,7 @@ function LoginForm() {
           draggable: true,
           progress: undefined,
         });
+        dispatch(SET_USER_MOBILE(mobile))
         // ...
       })
       .catch((error) => {
