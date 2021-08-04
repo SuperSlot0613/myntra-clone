@@ -58,4 +58,4 @@ app.post("/payments", async (request, response) => {
 
 // //Listen Command
 // exports.api = functions.https.onRequest(app);
-app.listen(8282, () => console.log("LISTENING AT PORT 8282"));
+app.listen(8888, () => console.log("LISTENING AT PORT 8282"));

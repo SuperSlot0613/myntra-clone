@@ -40,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "(cd backend && nodemon app.js) & npm run start"
   },
   "eslintConfig": {
     "extends": "react-app"
