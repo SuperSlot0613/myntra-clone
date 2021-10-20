@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Order.css";
 import { db } from "../../firebase";
-import Order from './Order'
+import Order from "./Order";
 import { useSelector } from "react-redux";
 import { selectBasket } from "../../features/basketSlice";
-import { selectMobile, selectUser, selectUserUid } from "../../features/detailSlice";
+import {
+  selectMobile,
+  selectUser,
+  selectUserUid,
+} from "../../features/detailSlice";
+import axios from "axios";
 
 function Orders() {
-
   const user = useSelector(selectUser);
   const useruid = useSelector(selectUserUid);
-  console.log(useruid)
-  
+  // console.log(useruid)
+
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -29,20 +33,22 @@ function Orders() {
             }))
           );
         });
-    }
-    else {
-        setOrders([])
+
+      axios.get("http://localhost:8888/orders").then(function (response) {
+        // console.log(response);
+      });
+    } else {
+      setOrders([]);
     }
   }, []);
-  console.log(orders)
+  // console.log(orders)
   return (
     <div className="orders">
       <h1>Your Oders</h1>
       <div className="orders__order">
-          {orders?.map(order =>(
-              <Order order={order}/>
-          ))}
-
+        {orders?.map((order) => (
+          <Order order={order} />
+        ))}
       </div>
     </div>
   );

@@ -14,12 +14,16 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "currency-formatter": "^1.5.8",
     "express": "^4.17.1",
     "firebase": "^8.8.0",
     "firebase-tools": "^9.16.0",
+    "googleapis": "^88.2.0",
     "moment": "^2.29.1",
+    "mongoose": "^6.0.8",
+    "nodemailer": "^6.6.5",
     "react": "^17.0.2",
     "react-currency-format": "^1.0.0",
     "react-dom": "^17.0.2",
@@ -37,7 +41,7 @@
     "stripe": "^8.167.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd backend && node app.js\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

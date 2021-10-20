@@ -18,7 +18,7 @@ function Header() {
   const basket = useSelector(selectBasket);
 
   const user = useSelector(selectUser);
-  console.log(user);
+  // console.log(user);
 
   const wishlist = useSelector(selectWishlist);
 
@@ -28,8 +28,8 @@ function Header() {
       dispatch(EMPTY_BASKET());
       dispatch(EMPTY_WISHLIST());
       history.push("/");
-    }else{
-      history.push("/login")
+    } else {
+      history.push("/login");
     }
   };
 
@@ -37,15 +37,17 @@ function Header() {
     <div className="header">
       <Link to="/">
         <div className="header_left">
-          <img
+          {/* <img
             src="https://www.searchpng.com/wp-content/uploads/2019/01/Myntra-logo-png-icon.png"
             alt=""
             className="header_img"
-          />
+          /> */}
         </div>
       </Link>
       <div className="header_middle">
-        <p className="header_home">HOME</p>
+        <Link to="/" style={{textDecoration:"none",color:"black"}}>
+          <p className="header_home">HOME</p>
+        </Link>
 
         <p className="header_women">WOMEN</p>
 
@@ -66,7 +68,7 @@ function Header() {
             {user ? user : "Profile"}
           </span>
         </div>
-        <Link to="/wishlist">
+        <Link to="/wishlist" style={{textDecoration:"none",color:"black"}}>
           <div className="wishlist">
             {/* <IconButton> */}
             <FavoriteBorderIcon className="wishlist_icon" />
@@ -76,7 +78,7 @@ function Header() {
             </span>
           </div>
         </Link>
-        <Link to="/basket">
+        <Link to="/basket" style={{textDecoration:"none",color:"black"}}>
           <div className="cart">
             <AddShoppingCartIcon className="basket_icon" />
             <span className="header__optionLineTwo">
@@ -84,7 +86,7 @@ function Header() {
             </span>
           </div>
         </Link>
-        <Link to="/order">
+        <Link to="/order" style={{textDecoration:"none",color:"black"}}>
           <div className="cart">
             <EventIcon className="basket_icon" />
             <span className="header__optionLineTwo">Order Items</span>

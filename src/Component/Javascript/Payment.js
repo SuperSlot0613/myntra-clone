@@ -18,12 +18,15 @@ import { db } from "../../firebase";
 import StripeCheckout from "react-stripe-checkout";
 import { Button } from "@material-ui/core";
 import firebase from "firebase";
+import axios from "axios";
 
 function Payment() {
   const basket = useSelector(selectBasket);
   const user = useSelector(selectUser);
   const useruid = useSelector(selectUserUid);
   const mobile = useSelector(selectMobile);
+
+  // const [allInfo, setallInfo] = useState([]);
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -36,14 +39,15 @@ function Payment() {
   navigator.geolocation.getCurrentPosition(function (position) {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
-    console.log("Latitude is :", position.coords.latitude);
-    console.log("Longitude is :", position.coords.longitude);
+    // console.log("Latitude is :", position.coords.latitude);
+    // console.log("Longitude is :", position.coords.longitude);
   });
 
   const makePayment = (token, address) => {
     const body = {
       token,
       pamount,
+      address,
     };
     const headers = {
       "Content-Type": "application/json",
@@ -73,9 +77,27 @@ function Payment() {
             amount: getBasketTotal(basket),
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           });
+
+        const custmorsInfo = {
+          user,
+          mobile,
+          pamount,
+          address,
+          basket,
+        };
+
+        axios
+          .post("http://localhost:8888/orderInfo", custmorsInfo)
+          .then(function (response) {
+            console.log(response);
+          });
+
+        
+        
+
         dispatch(EMPTY_BASKET());
         history.push("/order");
-        console.log("address", address);
+        // console.log("address", address);
         // console.log("STATUS ", status);
       })
       .catch((error) => console.log(error));
@@ -137,10 +159,18 @@ function Payment() {
                     currency="INR"
                     shippingAddress
                     billingAddress
-                    allowRememberMe
-                    bitcoin={true}
+                    //allowRememberMe
+                    // bitcoin={true}
                   >
-                    <Button className="payment_btn" style={{color:"white",background:"crimson",fontSize:"16px",fontWeight:"700"}}>
+                    <Button
+                      className="payment_btn"
+                      style={{
+                        color: "white",
+                        background: "crimson",
+                        fontSize: "16px",
+                        fontWeight: "700",
+                      }}
+                    >
                       Buy Product ₹{getBasketTotal(basket)}.00
                     </Button>
                   </StripeCheckout>

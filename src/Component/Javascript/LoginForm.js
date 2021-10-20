@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import { SET_USER_MOBILE } from "../../features/detailSlice";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 toast.configure();
 
 function LoginForm() {
@@ -87,7 +88,7 @@ function LoginForm() {
       .then((result) => {
         // User signed in successfully.
         const user = result.user;
-        console.log(JSON.stringify(user));
+        // console.log(JSON.stringify(user));
         history.push("/");
         toast.success(`OTP has been Verified`, {
           position: "top-right",
@@ -98,7 +99,7 @@ function LoginForm() {
           draggable: true,
           progress: undefined,
         });
-        dispatch(SET_USER_MOBILE(mobile))
+        dispatch(SET_USER_MOBILE(mobile));
         // ...
       })
       .catch((error) => {
@@ -152,6 +153,16 @@ function LoginForm() {
         console.log(error.message);
       });
     onSignInSubmit(e);
+    const userInfo = {
+      email,
+      password,
+      mobile,
+    };
+    axios
+      .post("http://localhost:8888/userInfo", userInfo)
+      .then(function (response) {
+        console.log(response);
+      });
   };
 
   return (
@@ -226,10 +237,7 @@ function LoginForm() {
           </div>
           <div className="login_button">
             {!disable && (
-              <Button
-                className="btn"
-                onClick={signIn}
-              >
+              <Button className="btn" onClick={signIn}>
                 Sign In
               </Button>
             )}
