@@ -69,7 +69,7 @@ async function sendMail(Infodata) {
       Zip-Code:${Infodata.address.billing_address_zip}
       Country:${Infodata.address.billing_address_country}
       `,
-      html:"",
+      html: "",
     };
 
     const result = await transport.sendMail(mailOptions);
@@ -79,7 +79,10 @@ async function sendMail(Infodata) {
   }
 }
 
-app.get("/", (request, response) => response.status(200).send("hello world"));
+app.get("/", (request, response) => {
+  console.log("Heloo world")
+  response.status(200).send("hello world");
+});
 
 app.get("/user", async (req, res) => {
   //reading data from database
@@ -153,4 +156,4 @@ app.post("/orderInfo", async (req, res) => {
 
 // //Listen Command
 // exports.api = functions.https.onRequest(app);
-app.listen(8888, () => console.log(`LISTENING AT PORT 8888`));
+app.listen(process.env.PORT  ||8888, () => console.log(`LISTENING AT PORT 8888`));

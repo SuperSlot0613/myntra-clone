@@ -92,9 +92,6 @@ function Payment() {
             console.log(response);
           });
 
-        
-        
-
         dispatch(EMPTY_BASKET());
         history.push("/order");
         // console.log("address", address);
