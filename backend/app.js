@@ -5,7 +5,7 @@ const user_model = require("./application_model");
 const bcrypt = require("bcryptjs");
 
 const stripe = require("stripe")(
-  "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"
+  "STRIP_KEY"
 );
 
 const nodemailer = require("nodemailer");
@@ -13,11 +13,11 @@ const { google } = require("googleapis");
 
 // These id's and secrets should come from .env file.
 const CLIENT_ID =
-  "980156414758-46jfchhdglcfdjkb6uaqsapobssgl0kl.apps.googleusercontent.com";
-const CLEINT_SECRET = "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";
+  "GOOGLE_API_KEY";
+const CLEINT_SECRET = "CLIENT_SECRET_KEY";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//04feQKccXZpg_CgYIARAAGAQSNwF-L9Ir4N07TtOXnZeSU_f78OnZ3pzN1oKuCMvnFScVynjtf0jvV2AktI-P-xrTRVzuOhD2mjw";
+  "REFERESH_TOKEN_ID";
 
 const uuid = require("uuid");
 const userdatabase = user_model.User;
