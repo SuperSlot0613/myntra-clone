@@ -1,4 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# restaurant-menu
+# SuperSlot React JS Myntra Clone and Online cloths shopping website
+
+![SuperSlot React JS  Myntra Clone](myntra-home.png?raw=true "SuperSlot React JS  Myntra Clone")</br>
+![](myntra-product.png?raw=true "SuperSlot React JS  Myntra Clone")
+
+### <a href="https://myntra-clone-2d5af.web.app/">LIVE DEMO</a>
+
+##  Myntra Clone and Online cloths shopping website
+
+This Myntra Clone pack is made using React. The data on the website is directly linked to a code. Any changes to the website can be made in the code. The changes will then be reflected on to the website page. This allows you to customize your own personal web page that can be used for applying to jobs or other personal uses.
+
+## To run the backend server
+To run the backend server go to the backend folder and run "nodemon app.js" command 
+
+## 1. Make sure you have NODE installed!
+
+Firstly, you will need to download the latest version of Node by <a href="https://nodejs.org/en/download/">CLICKING HERE</a>
+
+## 2. Install Dependancies
+
+Next, you need to install all the dependancies using:
+
+```npm install```
+
+Once this is done, you can start the app with:
+
+```npm start```
+
+## 3. (OPTIONAL) Replacing images and/or fonts
+
+If you want to display your own pictures then you have to replace the code.
+
+## 4. Finalising Resume
+
+Once all the formatting and data input is finalised, run `npm run build`. This will create a dedicated build folder.
+
+## 5. Host Website Online
+
+1) Open the build folder in the finder screen
+2) Go to <a href="https://www.netlify.com/">Netlify</a> and set up a profile
+3) Go to the 'Sites Tab'
+4) Simply Drag and drop the 'Build' Folder into the designated upload space
+5) The app will begin deploying & the deployment URL will be presented!
+
+🚀 BOOM, you are now LIVE!!!
+
+## Credits
+
 
 ## Available Scripts
 
@@ -15,7 +63,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -24,8 +71,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
